@@ -28,7 +28,7 @@ while(True):
             x2 = int(detections[0, 0, i, 5] * frameWidth)
             y2 = int(detections[0, 0, i, 6] * frameHeight)
 
-            cv2.rectangle(img, (int(x1), int(y1)), (int(x2), int(y2)), (23, 230, 210), thickness=2)
+            cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (23, 230, 210), thickness=2)
 
     cv2.imshow('frame', frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
